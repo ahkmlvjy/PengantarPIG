@@ -1,0 +1,59 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{\textit{Today I Learn 4}}
+\author{Ahkamil Hakim Vijaya}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Pendahuluan}
+Persamaan respons gravitasi komponen vertikal suatu model bola homogen 2D yang ditampilkan pada buku pemodelan inversi geofisika halaman 105 adalah sebagai berikut:
+\begin{equation}
+    g_z(x)=G \frac{(4/3) \pi R^3 \rho}{((x-x_0)^2 + (z_0)^2)^\frac{3}{2}}
+\end{equation}
+Persamaan diatas merupakan persamaan yang digunakan untuk mencari nilai respons gravitasi pada suatu titik pengukuran \textit{x} dari model bola homogen yang memiliki parameter ($x_0$, $z_0$, \textit{radius}, dan \textit{rho}).
+Untuk mendapatkan intuisi mengenai bagaimana persamaan (1) terbentuk dan bagaimana cara menggunakan (\LaTeX), maka ditulislah barang ini.
+\section{Isi}
+Diawali dengan \textit{Newton's Second Law} dan \textit{Newton's Gravitational Law} :
+
+\begin{equation}
+    F =  ma / F=mg
+\end{equation}
+\begin{equation}
+    F = G \frac{M m}{r^2}
+\end{equation}
+Dari kedua persamaan tersebut akan didapatkan:
+\begin{equation}
+    g = G \frac{M}{r^2}
+\end{equation}
+Persamaan (4) menyatakan bahwa percepatan gravitasi akan berbanding lurus dengan konstanta gravitasi G, massa benda, dan berbanding terbalik dengan kuadrat jarak. Untuk mengetahui percepatan gravitasi pada komponen vertikalnya saja, diperlukan perkalian dengan: \begin{equation}
+    cos(\theta) = \frac{z_0}{r}
+\end{equation}
+Sehingga:
+\begin{equation}
+    g_z = G \frac{M z_0}{r^3}
+\end{equation}
+Bola homogen merupakan model yang memiliki parameter model $x_0$ pusat bola, $z_0$ pusat bola, radius bola, dan densitas. Sehingga variabel massa pada persamaan dapat ditulis ulang sebagai:
+\begin{equation}
+    g_z = G \frac{(4/3) \pi R^3 \rho}{r^3}
+\end{equation}
+Meskipun dalam bidang 2D (x,z), variabel massa menggunakan volume bola, bukan menggunakan luas karena dimensi y dianggap  menerus dan akan dikalikan dengan \textit{rho} yang memiliki satuan kilogram per meter kubik. 
+
+Nilai \textit{r} yang merupakan jarak dari titik pengukuran ke pusat bola juga harus dicari agar input model parameter cocok dengan persamaan yang digunakan, dalam hal ini adalah parameter model $x_0$ dan $z_0$. Pada kondisi titik pengukuran \textit{x} sama dengan titik $x_0$ pusat bola, nilai \textit{r} akan sama dengan nilai $z_0$. Sedangkan dalam kondisi titik pengukuran \textit{x} tidak sama dengan titik $x_0$ pusat bola, maka dapat diberlakukan trigonometri sederhana:
+\begin{equation}
+    r = \sqrt{(x-x_0)^2 + (z_0)^2}
+\end{equation}
+Dengan didapatkannya persamaan (7) dan (8), dapat dilakukan substitusi nilai \textit{r} sebagai berikut:
+\begin{equation}
+    g_z(x)=G \frac{(4/3) \pi R^3 \rho}{((x-x_0)^2 + (z_0)^2)^\frac{3}{2}}
+\end{equation}
+
+\section{Penutup}
+Dikarenakan \textit{skill issue}, tulisan ini belum dapat memberikan visualisasi untuk memperjelas bagaimana parameter model bekerja. Indonesia negara hukum, waalaikum. Terima Kasih. 
+\end{document}
